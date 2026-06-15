@@ -101,10 +101,15 @@ def make_wordcloud(freq_dict, title=""):
 
         # macOS 한글 폰트 탐색
         font_candidates = [
+            # macOS
             "/System/Library/Fonts/AppleSDGothicNeo.ttc",
             "/Library/Fonts/AppleGothic.ttf",
             "/System/Library/Fonts/Supplemental/AppleMyungjo.ttf",
+            # Linux (Streamlit Cloud)
             "/usr/share/fonts/truetype/nanum/NanumGothic.ttf",
+            "/usr/share/fonts/truetype/nanum/NanumBarunGothic.ttf",
+            "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
+            "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
         ]
         font_path = next((p for p in font_candidates if os.path.exists(p)), None)
 
